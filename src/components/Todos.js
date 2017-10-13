@@ -12,10 +12,10 @@ class Todos extends Component {
       <div>
         <h2>Todos:</h2>
         {
-          this.props.todos.map(todo => <div><em>{todo}</em></div>)
+          this.props.todos.map((todo, i) => <div key={i}><em>{todo}</em></div>)
         }
 
-        <br /><input ref='newTodo' placeHolder='type new todo' type="text" />
+        <br /><input ref='newTodo' placeholder='type new todo' type="text" />
         <button onClick={this.onNewTodo.bind(this)}>enter new todo</button>
       </div>
     );

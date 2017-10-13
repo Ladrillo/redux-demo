@@ -1,4 +1,4 @@
-import { createStore, combineReducers } from 'redux';
+import { combineReducers } from 'redux';
 
 
 function counter(state = 0, action) {
@@ -24,7 +24,7 @@ function currentPlayer(state = 'John', action) {
 function todos(state = ['laundry', 'study Redux'], action) {
   switch (action.type) {
     case 'ADD_TODO':
-      return [...state, action.payload];
+      return state.concat(action.payload);
     default:
       return state;
   }

@@ -11,7 +11,7 @@ class Player extends Component {
     return (
       <div>
         <h2>Current player: {this.props.currentPlayer}</h2>
-        <input ref='newPlayer' placeHolder='type new player' type="text" />
+        <input ref='newPlayer' placeholder='type new player' type="text" />
         <button onClick={this.onNewPlayer.bind(this)}>enter new player</button>
       </div>
     );
