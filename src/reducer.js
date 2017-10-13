@@ -25,6 +25,8 @@ function todos(state = ['laundry', 'study Redux'], action) {
   switch (action.type) {
     case 'ADD_TODO':
       return state.concat(action.payload);
+    case 'DELETE_ONE':
+      return state.filter((e, i) => i !== action.payload)
     default:
       return state;
   }
